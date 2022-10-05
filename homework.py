@@ -27,6 +27,7 @@ class InfoMessage:
 class Training:
     """Базовый класс тренировки.
        Атрибуты класса."""
+
     LEN_STEP: float = 0.65
     M_IN_KM: int = 1000
 
@@ -69,7 +70,6 @@ class Running(Training):
 
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий при беге."""
-
         coeff_calorie_1: float = 18
         coeff_calorie_2: float = 20
         spent_calories = ((coeff_calorie_1 * self.get_mean_speed()
@@ -80,6 +80,7 @@ class Running(Training):
 
 class SportsWalking(Training):
     """Тренировка: спортивная ходьба."""
+
     def __init__(self,
                  action: int,
                  duration: float,
@@ -103,6 +104,7 @@ class SportsWalking(Training):
 class Swimming(Training):
     """Тренировка: плавание.
        Атрибуты класса."""
+
     M_IN_KM = 1000
     LEN_STEP = 1.38
 
